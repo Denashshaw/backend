@@ -10,7 +10,8 @@ connectDB();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use("/api/goals", require("./router/goalsRouter"));
+app.use("/api/goals", require("./router/goalRouter"));
+app.use("/api/users", require("./router/userRouter"));
 app.use(errorHandler);
 
 app.listen(port, () => {
